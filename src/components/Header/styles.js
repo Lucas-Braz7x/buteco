@@ -1,5 +1,22 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { colors } from '../../theme/colors';
+
+/*eslint-disable*/
+const navigateEntryAnimate = keyframes`
+  0%{height: 0;}
+  25%{height: 25%;}
+  50%{height: 50%;}
+  75%{height: 75%;}
+  100%{height: 100%;}
+`;
+
+const navigateLeftAnimate = keyframes`
+  0%{height: 100%;}
+  25%{height: 75%;}
+  50%{height: 50%;}
+  75%{height: 25%;}
+  100%{height: 0;}
+`;
 
 export const HeaderContainer = styled.div`
   width: 100%;
@@ -10,14 +27,15 @@ export const HeaderContainer = styled.div`
 
   display: flex;
   align-items: center;
-
   justify-content: space-between;
+
   box-shadow: 10px 10px 30px ${colors.shadowColor};
   z-index: 10;
 `;
 
 export const NavMenu = styled.nav`
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
+    animation: ${(props) => (props.clicked ? navigateEntryAnimate : navigateLeftAnimate)}  3s ;
     display: ${(props) => (props.clicked ? 'flex' : 'block')};
     justify-content: ${(props) => (props.clicked ? 'center' : 'flex-start')};
     position: ${(props) => (props.clicked ? 'fixed' : 'relative')};
@@ -44,6 +62,10 @@ export const ListInfo = styled.ul`
     font-size: 1.4rem;
     font-weight: bold;
     transition: transform 0.3s;
+
+    @media (max-width: 480px) {
+      font-size: 1.2rem;
+    }
   }
 
   li:hover {

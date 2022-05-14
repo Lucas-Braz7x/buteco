@@ -5,6 +5,9 @@ export const Home = () => {
   return (
     <>
       <Header />
+      {/* <Search />
+      <Catalog />
+      <Footer /> */}
     </>
   );
 };

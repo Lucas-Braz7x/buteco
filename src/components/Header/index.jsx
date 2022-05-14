@@ -8,13 +8,12 @@ export const Header = () => {
 
   const handleClick = () => {
     setClicked(!clicked);
-    console.log(clicked);
   };
   return (
     <HeaderContainer>
       <Logo src={logo} alt="Logo da loja buteco" />
       <MenuHamburguer click={handleClick} />
-      <NavMenu clicked={clicked}>
+      <NavMenu id="navigate" clicked={clicked}>
         <ListInfo clicked={clicked}>
           <li>Home</li>
           <li>sobre</li>
