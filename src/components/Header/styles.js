@@ -18,6 +18,11 @@ const navigateLeftAnimate = keyframes`
   100%{height: 0;}
 `;
 
+const listAnimate = keyframes`
+  from{opacity: 0;}
+  to{opacity: 1;}
+`;
+
 export const HeaderContainer = styled.div`
   width: 100%;
   height: 40px;
@@ -34,15 +39,14 @@ export const HeaderContainer = styled.div`
 `;
 
 export const NavMenu = styled.nav`
+z-index: 9;
 @media (max-width: 480px) {
-    animation: ${(props) => (props.clicked ? navigateEntryAnimate : navigateLeftAnimate)}  3s ;
+    animation: ${(props) => (props.clicked ? navigateEntryAnimate : navigateLeftAnimate)}  2s ease;
     display: ${(props) => (props.clicked ? 'flex' : 'block')};
     justify-content: ${(props) => (props.clicked ? 'center' : 'flex-start')};
     position: ${(props) => (props.clicked ? 'fixed' : 'relative')};
     top: ${(props) => (props.clicked ? '40px' : '0')};
     left: 0;
-
-    padding: ${(props) => (props.clicked ? '20px' : '0')};
 
     height: ${(props) => (props.clicked ? '100vh' : '100%')};
     width: ${(props) => (props.clicked ? '100vw' : 'auto')};
@@ -79,6 +83,9 @@ export const ListInfo = styled.ul`
   }
 
   @media (max-width: 480px) {
+    margin-top: 20vh;
+    opacity: 0;
+    animation: ${(props) => (props.clicked ? listAnimate : '')}  2s 1s forwards;
     flex-direction: column;
     position: absolute;
     align-items: center;
@@ -87,6 +94,7 @@ export const ListInfo = styled.ul`
 `;
 
 export const Logo = styled.img`
+  margin-left: -20px;
   width: 60px;
   height: 60px;
 `;
