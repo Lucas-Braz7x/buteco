@@ -9,5 +9,6 @@ export default createGlobalStyle`
 
   html{
     font-size: 62.5%;
+    background: #ffffff;
   }
 `;
