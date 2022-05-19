@@ -10,5 +10,7 @@ export default createGlobalStyle`
   html{
     font-size: 62.5%;
     background: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
   }
 `;

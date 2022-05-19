@@ -27,7 +27,12 @@ export const HeaderContainer = styled.div`
   width: 100%;
   height: 40px;
   color: ${colors.textColor};
-  background: ${colors.primaryColor};
+  background: linear-gradient(
+    to right,
+    ${colors.lightBackground} 5%,
+    ${colors.lightBackground} 20%,
+    ${colors.primaryColor}
+  );
   padding: 0 20px;
 
   display: flex;

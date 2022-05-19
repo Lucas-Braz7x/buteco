@@ -14,4 +14,12 @@ export const ButtonContainer = styled.button`
   font-size: 1.8rem;
   line-height: 2.7rem;
   text-transform: capitalize;
+
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(0.9);
+    filter: brightness(1.1);
+    cursor: pointer;
+  }
 `;
