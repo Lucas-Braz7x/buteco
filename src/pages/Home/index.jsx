@@ -1,12 +1,6 @@
 import React from 'react';
-import { Beers } from '../../components/Beers';
-import { Search } from '../../components/Search';
+import { Banner } from '../../components/Banner/';
 
 export const Home = () => {
-  return (
-    <>
-      <Search />
-      <Beers />
-    </>
-  );
+  return <Banner />;
 };

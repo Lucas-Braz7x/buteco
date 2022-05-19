@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { HeaderContainer, ListInfo, Logo, NavMenu } from './styles';
 import logo from '../../assets/images/logo.svg';
 import { MenuHamburguer } from '../MenuHamburguer';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
   const [clicked, setClicked] = useState(false);
@@ -15,11 +16,15 @@ export const Header = () => {
       <MenuHamburguer click={handleClick} />
       <NavMenu id="navigate" clicked={clicked}>
         <ListInfo clicked={clicked}>
-          <li>Home</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/produtos">Produtos</Link>
+          </li>
           <li>sobre</li>
           <li>contatos</li>
           <li>favoritos</li>
-          <li>carrinho</li>
         </ListInfo>
       </NavMenu>
     </HeaderContainer>

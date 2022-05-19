@@ -61,7 +61,10 @@ export const ListInfo = styled.ul`
   list-style: none;
   text-decoration: none;
 
-  li {
+  li,
+  li a{
+    color: ${colors.textColor};
+    text-decoration: none;
     text-transform: capitalize;
     font-size: 1.4rem;
     font-weight: bold;
@@ -72,6 +75,7 @@ export const ListInfo = styled.ul`
     }
   }
 
+  li a:hover,
   li:hover {
     color: ${colors.greyColor};
     cursor: pointer;
