@@ -1,11 +1,7 @@
 import React from 'react';
 import { Button } from '../Button';
-import { BannerContainer, BeerImage, BeerImageContainer, TitlesContainer } from './styles';
-import beer from '../../assets/images/beer.svg';
-/* import chopp from '../../assets/images/beer2.svg';
-import champagne from '../../assets/images/champagne.svg'; */
-import bottle from '../../assets/images/bottle.svg';
-import wine from '../../assets/images/wine.svg';
+import { BannerContainer, TitlesContainer } from './styles';
+import { Form } from '../Form';
 
 export const Banner = () => {
   const widthButton = 200;
@@ -21,11 +17,7 @@ export const Banner = () => {
           Veja nossos produtos
         </Button>
       </TitlesContainer>
-      <BeerImageContainer>
-        <BeerImage src={bottle} alt="" />
-        <BeerImage src={beer} alt="" />
-        <BeerImage src={wine} alt="" />
-      </BeerImageContainer>
+      <Form />
     </BannerContainer>
   );
 };

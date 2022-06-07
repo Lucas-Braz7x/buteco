@@ -23,6 +23,11 @@ export const BannerContainer = styled.div`
     ${colors.lightBackground} 20%,
     ${colors.primaryColor}
   );
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    justify-content: space-around;
+  }
 `;
 
 export const TitlesContainer = styled.div`
@@ -42,70 +47,5 @@ export const TitlesContainer = styled.div`
     font-size: 1.4rem;
     line-height: 2.1rem;
     margin-bottom: 50px;
-  }
-`;
-
-export const BeerImageContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 50%;
-
-  img:nth-child(1) {
-    position: absolute;
-    bottom: -20px;
-    right: 200px;
-  }
-  img:nth-child(2) {
-    position: absolute;
-    bottom: 20px;
-    right: 0px;
-  }
-  img:nth-child(3) {
-    position: absolute;
-    bottom: 20px;
-    right: 315px;
-  }
-
-  @media (max-width: 925px) {
-    max-height: 300px;
-    max-width: 300px;
-
-    img:nth-child(1) {
-      right: 150px;
-    }
-    img:nth-child(3) {
-      right: 270px;
-    }
-  }
-
-  @media (max-width: 925px) {
-    max-height: 300px;
-    max-width: 300px;
-
-    img:nth-child(1) {
-      right: 60px;
-    }
-    img:nth-child(3) {
-      right: 130px;
-    }
-  }
-`;
-
-export const BeerImage = styled.img`
-  max-height: 400px;
-  max-width: 400px;
-
-  @media (max-width: 925px) {
-    min-height: 200px;
-    min-width: 200px;
-  }
-
-  @media (max-width: 850px) {
-    max-height: 200px;
-    max-width: 200px;
-  }
-
-  @media (max-width: 550px) {
-    display: none;
   }
 `;
